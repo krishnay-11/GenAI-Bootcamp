@@ -16,3 +16,9 @@
     - Maintains conversation history using `InMemorySaver` and a thread ID.
     - Supports continuous user interaction until `bye`, `quit`, `exit`, `thanks`, or `ok`.
     
+    File:- main3.py
+    # Persistent Memory Weather Agent
+    - AI weather agent built using LangChain, Gemini, and LangGraph.
+    - Uses SQLite to persist conversation memory across program sessions.
+    - Maintains conversation history using a thread ID for continuous conversations.
+    - Uses custom weather and location tools to provide weather information.
