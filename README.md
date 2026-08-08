@@ -30,3 +30,24 @@
     - Uses Supabase PostgreSQL with PostgresSaver for persistent memory.
     - Maintains conversation history using a thread ID across sessions.
     - Uses custom weather and location tools to provide weather information.
+
+    File:- main_flask.py
+
+    - Implements the Flask backend and handles application routes such as `/`, `/send`, and `/clear`.
+    - Manages user sessions, conversation `thread_id`, chat history, and user location.
+    - Receives user messages and browser latitude/longitude and passes them to the AI agent.
+    - Processes the agent response and sends the conversation data to the frontend.
+
+    File:- flask_agent.py
+
+    - Creates the AI weather agent using Google Gemini, LangChain, and LangGraph.
+    - Implements the `get_weather()` tool to retrieve weather data from the OpenWeatherMap API.
+    - Implements the `get_location()` tool to convert the user's coordinates into their city using Nominatim.
+    - Uses SQLite checkpointing and a system prompt to maintain conversations and control agent tool usage.
+
+    File:- chat.html in templates folder
+
+    - Provides the frontend chat interface for interacting with the weather assistant.
+    - Displays user and AI messages dynamically using Jinja2.
+    - Uses the browser Geolocation API to capture the user's latitude and longitude.
+    - Sends user messages and location data to Flask and provides a New Conversation option.
