@@ -22,3 +22,11 @@
     - Uses SQLite to persist conversation memory across program sessions.
     - Maintains conversation history using a thread ID for continuous conversations.
     - Uses custom weather and location tools to provide weather information.
+
+    File:- main4.py
+    # PostgreSQL Persistent Memory Weather Agent
+
+    - AI weather agent built using LangChain, Gemini, and LangGraph.
+    - Uses Supabase PostgreSQL with PostgresSaver for persistent memory.
+    - Maintains conversation history using a thread ID across sessions.
+    - Uses custom weather and location tools to provide weather information.
