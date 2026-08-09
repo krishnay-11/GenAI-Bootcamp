@@ -57,3 +57,11 @@
     - Configured a LangChain chat model using Ollama.
     - Used Qwen3 1.7B as a self-hostable model running locally.
     - Invoked the model using `model.invoke()` and displayed the generated response.
+
+*** 04-self-llm-service
+    File:- server.py, client.py
+
+    - Created a self-hosted LLM service using Flask, LangChain, and Ollama.
+    - Used Ollama to run the Qwen3 1.7B model locally without relying on an external LLM API.
+    - Exposed a `/chat` API endpoint to process user messages and generate responses using the local model.
+    - Built a client using `requests` to communicate with the Flask service and maintain chat history.
