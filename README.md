@@ -51,3 +51,9 @@
     - Displays user and AI messages dynamically using Jinja2.
     - Uses the browser Geolocation API to capture the user's latitude and longitude.
     - Sends user messages and location data to Flask and provides a New Conversation option.
+
+*** 03-self-hostable-models
+
+    - Configured a LangChain chat model using Ollama.
+    - Used Qwen3 1.7B as a self-hostable model running locally.
+    - Invoked the model using `model.invoke()` and displayed the generated response.
