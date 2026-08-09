@@ -65,3 +65,18 @@
     - Used Ollama to run the Qwen3 1.7B model locally without relying on an external LLM API.
     - Exposed a `/chat` API endpoint to process user messages and generate responses using the local model.
     - Built a client using `requests` to communicate with the Flask service and maintain chat history.
+
+*** 05-structured-output-llm
+    File:- email_agent.py, recipe_generator.py
+
+      #email_agent.py
+    - Created an AI email agent using LangChain, Google Gemini, Pydantic, and environment variables.
+    - Used the Gemini gemini-3.1-flash-lite model to understand user requests and generate appropriate email content.
+    - Created a custom send_email tool that the agent can use when the user requests an email to be sent.
+    - Used Pydantic structured output to return the recipient, subject, body, status, and summary in a defined format.
+
+      #recipe_generator.py
+    - Created a structured recipe generator using LangChain, Google Gemini, Pydantic, and environment variables.
+    - Used the Gemini gemini-3.1-flash-lite model to identify ingredients and suggest recipes based on user input.
+    - Defined Pydantic models to structure recipe information including name, description, preparation time, ingredients, and recipes.
+    - Used with_structured_output() to ensure the LLM returns the recipe response in the predefined structured format.    
