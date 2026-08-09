@@ -9,3 +9,4 @@ __pycache__/
 # Database
 weather.db
 web.db*
+last_row.txt

@@ -80,3 +80,11 @@
     - Used the Gemini gemini-3.1-flash-lite model to identify ingredients and suggest recipes based on user input.
     - Defined Pydantic models to structure recipe information including name, description, preparation time, ingredients, and recipes.
     - Used with_structured_output() to ensure the LLM returns the recipe response in the predefined structured format.    
+
+*** 06-spreadsheet-automation
+    File:- spreadsheet_summary.py
+
+    - Fetches data from Google Spreadsheet using the Google Sheets API and identifies newly added rows using `last_row.txt`.
+    - Uses LangChain with a Google AI model to summarize the newly added spreadsheet data.
+    - Sends the generated summary through Gmail SMTP to the configured recipient.
+    - Uses `.env` to store API keys and email details, while `last_row.txt` tracks previously processed rows.
