@@ -88,3 +88,9 @@
     - Uses LangChain with a Google AI model to summarize the newly added spreadsheet data.
     - Sends the generated summary through Gmail SMTP to the configured recipient.
     - Uses `.env` to store API keys and email details, while `last_row.txt` tracks previously processed rows.
+
+***07-image-interpretation
+    - Reads an image from the images folder and converts its binary data into Base64 format for processing.
+    - Detects the image MIME type automatically using Python's mimetypes module.
+    - Sends the image along with a text prompt to a multimodal AI model through LangChain for image interpretation.
+    - Receives and prints the AI-generated description of the image.
