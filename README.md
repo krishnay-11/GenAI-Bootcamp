@@ -94,3 +94,34 @@
     - Detects the image MIME type automatically using Python's mimetypes module.
     - Sends the image along with a text prompt to a multimodal AI model through LangChain for image interpretation.
     - Receives and prints the AI-generated description of the image.
+
+***08-rag-agent
+    File:-rag_foundation.py
+    - Loads PDF, TXT, and Markdown files from the `Documents` folder and extracts their text.
+    - Combines all loaded document content into a single context that is provided to the LLM.
+    - Takes user queries through a continuous chat loop and keeps the conversation history.
+    - Generates answers from the LLM using the document context as the source of information. 
+
+    File:-rag.py
+    - Loads PDF and TXT files and converts their content into numerical embeddings for comparison.
+    - Stores these embeddings in an in-memory vector store to enable document retrieval.
+    - Uses similarity search to find the most relevant document content for each user query.
+    - Sends the retrieved content to the LLM as context and generates a relevant answer.   
+
+***9-web-search-agent
+
+    - Searches the web for recent coffee-related news using predefined queries and Tavily.
+    - Collects the search results and sends them to an LLM for processing and content generation.
+    - Generates a professional newsletter focused on positive coffee news with source references.
+    - Saves the generated newsletter in Markdown format as an `article.md` file. 
+
+***10-Local-AI-agent(Claude Code clone) 
+
+    - Uses a Gemini LLM with LangChain Agents to understand coding requests and decide which action to take.
+    - Provides custom tools to list files, read files, write or edit files, and create directories.
+    - Allows the agent to perform coding tasks directly in the current project by calling the required tools.
+    - Uses a system prompt to guide the agent on file navigation, editing, and directory management.
+    - Streams the agent's progress and shows which tools are being used during execution.
+    - Uses Rich to display tool results and the final AI response in a formatted terminal interface.
+    - Demonstrates how an LLM can work as an agent by combining reasoning, tool calling, and local file operations.
+    - Handles tool execution results and presents the agent's final response in a readable Markdown format.      
